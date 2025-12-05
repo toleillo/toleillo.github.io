@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanzas Personales - Gestiona tu dinero de forma privada y segura</title>
+  <meta name="description" content="Aplicación de escritorio para gestionar tus finanzas personales de forma offline, privada y segura. Sin suscripciones, sin anuncios.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <img src="logo.png" alt="Finanzas Personales" class="logo-image">
+          <span class="logo-text" data-i18n="appName">Finanzas Personales</span>
+        </div>
+        <div class="nav-links">
+          <a href="#features" data-i18n="nav.features">Características</a>
+          <a href="#download" data-i18n="nav.download">Descargar</a>
+          <a href="#about" data-i18n="nav.about">Acerca de</a>
+          <div class="nav-support-buttons">
+            <a href="https://ko-fi.com/mrtole" target="_blank" rel="noopener noreferrer" class="nav-support-btn kofi-nav" title="Support on Ko-fi">
+              <svg class="nav-support-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
+              </svg>
+            </a>
+            <a href="https://buymeacoffee.com/tole" target="_blank" rel="noopener noreferrer" class="nav-support-btn buymeacoffee-nav" title="Buy Me a Coffee">
+              <svg class="nav-support-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.067 2.017.144l.228.031c.267.04.533.088.798.145.392.085.895.113 1.07.542.055.137.08.288.111.431l.319 1.484a.237.237 0 01-.199.284h-.003c-.037.006-.075.01-.112.015a36.704 36.704 0 01-4.743.295 37.059 37.059 0 01-4.699-.304c-.14-.017-.293-.042-.417-.06-.326-.048-.649-.108-.973-.161-.393-.065-.768-.032-1.123.161-.29.16-.527.404-.675.701-.154.316-.199.66-.267 1-.069.34-.176.707-.135 1.056.087.753.613 1.365 1.37 1.502a39.69 39.69 0 0011.343.376.483.483 0 01.535.53l-.071.697-1.018 9.907c-.041.41-.047.832-.125 1.237-.122.637-.553 1.028-1.182 1.171-.577.131-1.165.2-1.756.205-.656.004-1.31-.025-1.966-.022-.699.004-1.556-.06-2.095-.58-.475-.458-.54-1.174-.605-1.793l-.731-7.013-.322-3.094c-.037-.351-.286-.695-.678-.678-.336.015-.718.3-.678.679l.228 2.185.949 9.112c.147 1.344 1.174 2.068 2.446 2.272.742.12 1.503.144 2.257.156.966.016 1.942.053 2.892-.122 1.408-.258 2.465-1.198 2.616-2.657.34-3.332.683-6.663 1.024-9.995l.215-2.087a.484.484 0 01.39-.426c.402-.078.787-.212 1.074-.518.455-.488.546-1.124.385-1.766zm-1.478.772c-.145.137-.363.201-.578.233-2.416.359-4.866.54-7.308.46-1.748-.06-3.477-.254-5.207-.498-.17-.024-.353-.055-.47-.18-.22-.236-.111-.71-.054-.995.052-.26.152-.609.463-.646.484-.057 1.046.148 1.526.22.577.088 1.156.159 1.737.212 2.48.226 5.002.19 7.472-.14.45-.06.899-.13 1.345-.21.399-.072.84-.206 1.08.206.166.281.188.657.162.974a.544.544 0 01-.169.364zm-6.159 3.9c-.862.37-1.84.788-3.109.788a5.884 5.884 0 01-1.569-.217l.877 9.004c.065.78.717 1.38 1.5 1.38 0 0 1.243.065 1.658.065.447 0 1.786-.065 1.786-.065.783 0 1.434-.6 1.499-1.38l.94-9.95a3.996 3.996 0 00-1.322-.238c-.826 0-1.491.284-2.26.613z"/>
+              </svg>
+            </a>
+          </div>
+          <select id="languageSelect" class="language-selector">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span data-i18n="hero.title">Gestiona tus finanzas</span>
+            <span class="gradient-text" data-i18n="hero.titleGradient">de forma privada</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Una aplicación de escritorio potente y fácil de usar para controlar tus ingresos, gastos, inversiones y objetivos financieros. 100% offline, tus datos nunca salen de tu ordenador.
+          </p>
+          <div class="hero-buttons">
+            <a href="#download" class="btn btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="hero.downloadBtn">Descargar Gratis</span>
+            </a>
+            <a href="#features" class="btn btn-secondary">
+              <span data-i18n="hero.featuresBtn">Ver Características</span>
+            </a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge" data-i18n="hero.badge.private">🔒 100% Privado</span>
+            <span class="badge" data-i18n="hero.badge.offline">💻 Offline</span>
+            <span class="badge" data-i18n="hero.badge.free">🆓 Gratis</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="app-preview">
+            <div class="preview-header">
+              <div class="preview-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="preview-content">
+              <div class="preview-card">
+                <div class="card-label" data-i18n="preview.totalBalance">Balance Total</div>
+                <div class="card-value positive">€12,450</div>
+              </div>
+              <div class="preview-card">
+                <div class="card-label" data-i18n="preview.income">Ingresos</div>
+                <div class="card-value">€3,500</div>
+              </div>
+              <div class="preview-card">
+                <div class="card-label" data-i18n="preview.expenses">Gastos</div>
+                <div class="card-value negative">€1,850</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="features.title">Características Principales</h2>
+        <p class="section-subtitle" data-i18n="features.subtitle">Todo lo que necesitas para gestionar tus finanzas personales</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3 class="feature-title" data-i18n="feature.control.title">Control Total</h3>
+          <p class="feature-description" data-i18n="feature.control.desc">Gestiona ingresos, gastos, inversiones y deudas desde una única aplicación intuitiva.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title" data-i18n="feature.reports.title">Reportes Visuales</h3>
+          <p class="feature-description" data-i18n="feature.reports.desc">Gráficas interactivas y reportes detallados para entender tu situación financiera de un vistazo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title" data-i18n="feature.goals.title">Objetivos Financieros</h3>
+          <p class="feature-description" data-i18n="feature.goals.desc">Define metas de ahorro y sigue tu progreso para alcanzar tus objetivos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title" data-i18n="feature.private.title">100% Privado</h3>
+          <p class="feature-description" data-i18n="feature.private.desc">Tus datos se almacenan localmente. Sin servidores externos, sin cuentas, sin seguimiento.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💻</div>
+          <h3 class="feature-title" data-i18n="feature.offline.title">Funciona Offline</h3>
+          <p class="feature-description" data-i18n="feature.offline.desc">No necesitas conexión a internet. Accede a tus finanzas en cualquier momento.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3 class="feature-title" data-i18n="feature.multilang.title">Multi-idioma</h3>
+          <p class="feature-description" data-i18n="feature.multilang.desc">Disponible en español e inglés con soporte para múltiples monedas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title" data-i18n="feature.theme.title">Tema Oscuro/Claro</h3>
+          <p class="feature-description" data-i18n="feature.theme.desc">Cambia entre modo oscuro y claro según tu preferencia.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title" data-i18n="feature.interface.title">Interfaz Moderna</h3>
+          <p class="feature-description" data-i18n="feature.interface.desc">Diseño elegante e intuitivo inspirado en las mejores aplicaciones financieras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="download">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="download.title">Descarga Gratis</h2>
+        <p class="section-subtitle" data-i18n="download.subtitle">Disponible para Windows y macOS</p>
+      </div>
+      <div class="download-grid">
+        <div class="download-card">
+          <div class="platform-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
+          </div>
+          <h3 class="platform-title" data-i18n="download.windows.title">Windows</h3>
+          <p class="platform-description" data-i18n="download.windows.desc">Compatible con Windows 10 y superior</p>
+          <div class="download-buttons">
+            <a href="https://github.com/toleillo/toleillo.github.io/releases/download/1.0.0/Offline.Personal.Finance.App.OPFA.Setup.1.0.0.exe" class="btn btn-download" download>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="download.windows.installer">Instalador (.exe)</span>
+            </a>
+            <a href="https://github.com/toleillo/toleillo.github.io/releases/download/1.0.0/Offline.Personal.Finance.App.OPFA.1.0.0.exe" class="btn btn-download-secondary" download>
+              <span data-i18n="download.windows.portable">Portable (.exe)</span>
+            </a>
+          </div>
+          <p class="version-info" data-i18n="download.version">Versión 1.0.0</p>
+        </div>
+        <div class="download-card">
+          <div class="platform-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+          </div>
+          <h3 class="platform-title" data-i18n="download.mac.title">macOS</h3>
+          <p class="platform-description" data-i18n="download.mac.desc">Compatible con macOS 10.13 y superior</p>
+          <div class="download-buttons">
+            <a href="https://github.com/toleillo/toleillo.github.io/releases/download/1.0.0/Offline.Personal.Finance.App.OPFA.-1.0.0.dmg" class="btn btn-download" download>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="download.mac.intel">Intel (.dmg)</span>
+            </a>
+            <a href="https://github.com/toleillo/toleillo.github.io/releases/download/1.0.0/Offline.Personal.Finance.App.OPFA.-1.0.0-arm64.dmg" class="btn btn-download-secondary" download>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="download.mac.arm">Apple Silicon (.dmg)</span>
+            </a>
+          </div>
+          <p class="version-info" data-i18n="download.version">Versión 1.0.0</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <h2 class="section-title" data-i18n="about.title">Por qué elegir Finanzas Personales</h2>
+        <div class="about-text">
+          <p data-i18n="about.p1" data-i18n-html>
+            <strong>Finanzas Personales</strong> es una aplicación de escritorio diseñada para personas que valoran su privacidad y quieren tener control total sobre sus datos financieros.
+          </p>
+          <p data-i18n="about.p2">
+            A diferencia de otras aplicaciones que requieren cuentas en línea y almacenan tus datos en servidores externos, nuestra aplicación funciona completamente offline. Tus transacciones, ingresos, gastos e inversiones se guardan únicamente en tu ordenador.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="check-icon">✓</span>
+              <span data-i18n="about.feature1">Sin suscripciones mensuales</span>
+            </div>
+            <div class="about-feature">
+              <span class="check-icon">✓</span>
+              <span data-i18n="about.feature2">Sin publicidad</span>
+            </div>
+            <div class="about-feature">
+              <span class="check-icon">✓</span>
+              <span data-i18n="about.feature3">Sin recopilación de datos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">
+            <img src="logo.png" alt="Finanzas Personales" class="logo-image">
+            <span class="logo-text">Finanzas Personales</span>
+          </div>
+          <p class="footer-description" data-i18n="footer.description">
+            Gestiona tus finanzas de forma privada y segura.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4 data-i18n="footer.links">Enlaces</h4>
+          <ul class="footer-links">
+            <li><a href="#features" data-i18n="nav.features">Características</a></li>
+            <li><a href="#download" data-i18n="nav.download">Descargar</a></li>
+            <li><a href="#about" data-i18n="nav.about">Acerca de</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-i18n="footer.platforms">Plataformas</h4>
+          <ul class="footer-links">
+            <li><a href="#download">Windows</a></li>
+            <li><a href="#download">macOS</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-i18n="footer.support">Apóyanos</h4>
+          <p class="support-description" data-i18n="footer.supportDesc">
+            Si te gusta esta aplicación, considera apoyarnos
+          </p>
+          <div class="support-buttons">
+            <a href="https://ko-fi.com/mrtole" target="_blank" rel="noopener noreferrer" class="support-btn kofi-btn">
+              <svg class="support-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
+              </svg>
+              <span data-i18n="footer.kofi">Ko-fi</span>
+            </a>
+            <a href="https://buymeacoffee.com/tole" target="_blank" rel="noopener noreferrer" class="support-btn buymeacoffee-btn">
+              <svg class="support-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.067 2.017.144l.228.031c.267.04.533.088.798.145.392.085.895.113 1.07.542.055.137.08.288.111.431l.319 1.484a.237.237 0 01-.199.284h-.003c-.037.006-.075.01-.112.015a36.704 36.704 0 01-4.743.295 37.059 37.059 0 01-4.699-.304c-.14-.017-.293-.042-.417-.06-.326-.048-.649-.108-.973-.161-.393-.065-.768-.032-1.123.161-.29.16-.527.404-.675.701-.154.316-.199.66-.267 1-.069.34-.176.707-.135 1.056.087.753.613 1.365 1.37 1.502a39.69 39.69 0 0011.343.376.483.483 0 01.535.53l-.071.697-1.018 9.907c-.041.41-.047.832-.125 1.237-.122.637-.553 1.028-1.182 1.171-.577.131-1.165.2-1.756.205-.656.004-1.31-.025-1.966-.022-.699.004-1.556-.06-2.095-.58-.475-.458-.54-1.174-.605-1.793l-.731-7.013-.322-3.094c-.037-.351-.286-.695-.678-.678-.336.015-.718.3-.678.679l.228 2.185.949 9.112c.147 1.344 1.174 2.068 2.446 2.272.742.12 1.503.144 2.257.156.966.016 1.942.053 2.892-.122 1.408-.258 2.465-1.198 2.616-2.657.34-3.332.683-6.663 1.024-9.995l.215-2.087a.484.484 0 01.39-.426c.402-.078.787-.212 1.074-.518.455-.488.546-1.124.385-1.766zm-1.478.772c-.145.137-.363.201-.578.233-2.416.359-4.866.54-7.308.46-1.748-.06-3.477-.254-5.207-.498-.17-.024-.353-.055-.47-.18-.22-.236-.111-.71-.054-.995.052-.26.152-.609.463-.646.484-.057 1.046.148 1.526.22.577.088 1.156.159 1.737.212 2.48.226 5.002.19 7.472-.14.45-.06.899-.13 1.345-.21.399-.072.84-.206 1.08.206.166.281.188.657.162.974a.544.544 0 01-.169.364zm-6.159 3.9c-.862.37-1.84.788-3.109.788a5.884 5.884 0 01-1.569-.217l.877 9.004c.065.78.717 1.38 1.5 1.38 0 0 1.243.065 1.658.065.447 0 1.786-.065 1.786-.065.783 0 1.434-.6 1.499-1.38l.94-9.95a3.996 3.996 0 00-1.322-.238c-.826 0-1.491.284-2.26.613z"/>
+              </svg>
+              <span data-i18n="footer.buymeacoffee">Buy Me a Coffee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2024 Finanzas Personales. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
