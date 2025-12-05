@@ -125,3 +125,118 @@ window.addEventListener('scroll', () => {
 console.log('%c💰 Finanzas Personales', 'font-size: 24px; font-weight: bold; color: #2563EB;');
 console.log('%c¡Gracias por tu interés en nuestra aplicación!', 'font-size: 14px; color: #CBD5E1;');
 console.log('%c100% Privado | 100% Offline | 100% Gratis', 'font-size: 12px; color: #10B981; font-weight: bold;');
+
+// ===================================
+// COOKIE CONSENT - GDPR Compliant
+// ===================================
+
+const COOKIE_CONSENT_KEY = 'opfa-cookie-consent';
+const GA_MEASUREMENT_ID = 'G-4KVVKQ17N8';
+
+// Function to load Google Analytics
+function loadGoogleAnalytics() {
+  // Create and append the gtag script
+  const gtagScript = document.createElement('script');
+  gtagScript.async = true;
+  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(gtagScript);
+
+  // Initialize gtag
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID);
+
+  console.log('✓ Google Analytics cargado con consentimiento');
+}
+
+// Function to check consent and show banner if needed
+function initCookieConsent() {
+  const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+  const cookieBanner = document.getElementById('cookieConsent');
+
+  if (consent === null) {
+    // No consent decision made yet, show banner
+    if (cookieBanner) {
+      cookieBanner.style.display = 'block';
+    }
+  } else if (consent === 'accepted') {
+    // User previously accepted cookies
+    loadGoogleAnalytics();
+  }
+  // If consent === 'rejected', do nothing (don't load GA)
+}
+
+// Function to handle cookie acceptance
+function acceptCookies() {
+  localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+  hideCookieBanner();
+  loadGoogleAnalytics();
+}
+
+// Function to handle cookie rejection
+function rejectCookies() {
+  localStorage.setItem(COOKIE_CONSENT_KEY, 'rejected');
+  hideCookieBanner();
+  console.log('✓ Cookies rechazadas - No se cargará analytics');
+}
+
+// Function to hide cookie banner with animation
+function hideCookieBanner() {
+  const cookieBanner = document.getElementById('cookieConsent');
+  if (cookieBanner) {
+    cookieBanner.style.animation = 'slideDown 0.4s ease-out';
+    setTimeout(() => {
+      cookieBanner.style.display = 'none';
+    }, 400);
+  }
+}
+
+// Add slide down animation
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+  @keyframes slideDown {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+`;
+document.head.appendChild(styleSheet);
+
+// Initialize cookie consent system when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initCookieConsent();
+
+    // Add event listeners to buttons
+    const acceptBtn = document.getElementById('acceptCookies');
+    const rejectBtn = document.getElementById('rejectCookies');
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', acceptCookies);
+    }
+
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', rejectCookies);
+    }
+  });
+} else {
+  initCookieConsent();
+
+  // Add event listeners to buttons
+  const acceptBtn = document.getElementById('acceptCookies');
+  const rejectBtn = document.getElementById('rejectCookies');
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', acceptCookies);
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', rejectCookies);
+  }
+}

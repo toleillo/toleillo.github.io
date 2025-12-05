@@ -86,7 +86,14 @@ const translations = {
     'footer.supportDesc': 'Si te gusta esta aplicación, considera apoyarnos',
     'footer.kofi': 'Ko-fi',
     'footer.buymeacoffee': 'Buy Me a Coffee',
-    'footer.copyright': '© 2024 Finanzas Personales. Todos los derechos reservados.'
+    'footer.copyright': '© 2024 Finanzas Personales. Todos los derechos reservados.',
+
+    // Cookie Consent
+    'cookie.title': 'Uso de Cookies',
+    'cookie.message': 'Utilizamos cookies analíticas para entender cómo interactúas con nuestra web y mejorar tu experiencia. Solo se activarán con tu consentimiento.',
+    'cookie.accept': 'Aceptar Cookies',
+    'cookie.reject': 'Rechazar',
+    'cookie.learnMore': 'Más información'
   },
 
   en: {
@@ -175,7 +182,14 @@ const translations = {
     'footer.supportDesc': 'If you like this app, consider supporting us',
     'footer.kofi': 'Ko-fi',
     'footer.buymeacoffee': 'Buy Me a Coffee',
-    'footer.copyright': '© 2024 Personal Finance. All rights reserved.'
+    'footer.copyright': '© 2024 Personal Finance. All rights reserved.',
+
+    // Cookie Consent
+    'cookie.title': 'Cookie Usage',
+    'cookie.message': 'We use analytical cookies to understand how you interact with our website and improve your experience. They will only be activated with your consent.',
+    'cookie.accept': 'Accept Cookies',
+    'cookie.reject': 'Reject',
+    'cookie.learnMore': 'Learn more'
   }
 };
 

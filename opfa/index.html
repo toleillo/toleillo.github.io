@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finanzas Personales - Gestiona tu dinero de forma privada y segura</title>
   <meta name="description" content="Aplicación de escritorio para gestionar tus finanzas personales de forma offline, privada y segura. Sin suscripciones, sin anuncios.">
+
+  <!-- Google Analytics will be loaded only with user consent (GDPR compliant) -->
+
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +15,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent" class="cookie-consent" style="display: none;">
+    <div class="cookie-consent-content">
+      <div class="cookie-consent-text">
+        <h3 class="cookie-consent-title" data-i18n="cookie.title">Uso de Cookies</h3>
+        <p class="cookie-consent-message" data-i18n="cookie.message">Utilizamos cookies analíticas para entender cómo interactúas con nuestra web y mejorar tu experiencia. Solo se activarán con tu consentimiento.</p>
+      </div>
+      <div class="cookie-consent-buttons">
+        <button id="acceptCookies" class="btn-cookie btn-cookie-accept" data-i18n="cookie.accept">Aceptar Cookies</button>
+        <button id="rejectCookies" class="btn-cookie btn-cookie-reject" data-i18n="cookie.reject">Rechazar</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
