@@ -1,21 +1,144 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjeta de Contacto de Desarrollador</title>
+    <title>Mr Tole — Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <img id="avatar" src="https://avatars.githubusercontent.com/u/730283?v=4" alt="Avatar de GitHub" class="avatar">
-        <h1 id="name">Juan Pastor</h1>
-        <p id="username">Toleillo</p>
-        <p id="bio">Software developer</p>
-        <p id="location">Spain</p>
-        <p id="contact">Contact: juantoleillo at gmail dot com</p>
-        <a id="profile-link" href="https://github.com/toleillo" target="_blank" rel="noopener noreferrer" class="button">GitHub Profile</a>
-    </div>
+    <!-- Grain texture overlay -->
+    <div class="grain"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-label fade-in">Software Developer</div>
+            <h1 class="hero-name fade-in">Mr Tole</h1>
+            <p class="hero-tagline fade-in">Crafting digital experiences<br>from Spain to the world</p>
+
+            <div class="hero-meta fade-in">
+                <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Spain</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">GitHub</span>
+                    <span class="meta-value">@toleillo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Contact</span>
+                    <span class="meta-value">juantoleillo@gmail.com</span>
+                </div>
+            </div>
+
+            <a href="https://github.com/toleillo" target="_blank" rel="noopener noreferrer" class="cta-button fade-in">
+                <span>View GitHub Profile</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="avatar-container fade-in">
+            <div class="avatar-glow"></div>
+            <img src="https://avatars.githubusercontent.com/u/730283?v=4" alt="Mr Tole" class="avatar">
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="section-header">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">A selection of projects I've built and shipped</p>
+        </div>
+
+        <div class="projects-grid">
+            <a href="https://toleillo.github.io/opfa/" target="_blank" rel="noopener noreferrer" class="project-card featured">
+                <div class="project-background" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div class="project-content">
+                    <div class="project-icon">💰</div>
+                    <div class="project-info">
+                        <h3 class="project-title">OPFA</h3>
+                        <p class="project-description">Offline Personal Finance App — Privacy-first financial management for desktop</p>
+                        <div class="project-tags">
+                            <span class="tag">Desktop App</span>
+                            <span class="tag">Electron</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                    </div>
+                    <div class="project-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://apps.apple.com/us/app/kanudel/id6749692414" target="_blank" rel="noopener noreferrer" class="project-card">
+                <div class="project-background" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <div class="project-content">
+                    <div class="project-icon">🍜</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Kanudel</h3>
+                        <p class="project-description">iOS application available on the App Store</p>
+                        <div class="project-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">Swift</span>
+                        </div>
+                    </div>
+                    <div class="project-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://apps.apple.com/us/app/animal-multiadventures/id6751409648" target="_blank" rel="noopener noreferrer" class="project-card">
+                <div class="project-background" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <div class="project-content">
+                    <div class="project-icon">🦁</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Animal Multiadventures</h3>
+                        <p class="project-description">Interactive iOS game for all ages on the App Store</p>
+                        <div class="project-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">Game</span>
+                            <span class="tag">Swift</span>
+                        </div>
+                    </div>
+                    <div class="project-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Mr Tole. Built with care.</p>
+            <div class="footer-links">
+                <a href="https://github.com/toleillo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:juantoleillo@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
